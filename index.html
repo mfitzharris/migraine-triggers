@@ -11,7 +11,10 @@
 <body>
 
   <div ng-controller="triggersController">
-  
+    <input type="text" placeholder="Is it a migraine trigger?" ng-model="search">
+    <ul>
+      <li ng-repeat="trigger in triggers | orderBy: 'name' | filter: search">{{trigger.name}}<br><span class="grey">{{trigger.notes}}<span></li>
+    </ul>
   </div>
 
 </body>
