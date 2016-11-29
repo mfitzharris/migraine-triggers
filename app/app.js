@@ -1,0 +1,1 @@
+var migraineTriggers = angular.module('migraineTriggers', [])
